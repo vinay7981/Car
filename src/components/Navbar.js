@@ -12,9 +12,8 @@ function Navbar() {
   const logoutHandler = () =>{
     authctx.logout();
   }
-  // const toggleNavbar = () => {
-  //   setOpenLinks(!openLinks);
-  // };
+  
+
   return (
     <div className="navbar">
       <div className="leftSide">

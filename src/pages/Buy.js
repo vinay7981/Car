@@ -3,8 +3,12 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useHistory } from 'react-router';
 import '../styles/Signin.css';
+import { useLocation } from 'react-router-dom';
 
-const Buy = () => {
+const Buy = (props) => {
+  const location = useLocation();
+ 
+console.log(location.state.carname) 
   const history = useHistory();
   const formik = useFormik({
     initialValues:{
@@ -51,19 +55,17 @@ const Buy = () => {
           // .nothing
         }
       });
-      
     }
   });
   
 
- 
   return (
     <div className='hello' >
       <form onSubmit={formik.handleSubmit}>
       <h1 className="my-4 font-weight-bold .display-3">Order Details</h1>
       <label>FirstName</label>
       <input 
-      id='firstName'
+      id='firstName' 
       name='firstName'
       type='text'
       placeholder="First Name" 
@@ -100,7 +102,7 @@ const Buy = () => {
       <label>state</label><br />
       <input 
       id='state'
-      
+
       name='state'
       type='text'
       placeholder="state"
@@ -147,27 +149,20 @@ const Buy = () => {
       />
 
 
-
-
 <label>Car_Booked</label><br />
       <input 
       id='Car_Booked'
       
       name='Car_Booked'
       type='Car'
+      value={location.state.carname}
       placeholder="car_Booked"
+    
+     
       onChange={formik.handleChange} 
      
       className='form-control shadow-none'
       />
-
-
-
-
-
-
-
-
 
        <button  
             

@@ -12,8 +12,8 @@ function Contact() {
   const sendHandler=(event)=>{
     event.preventDefault();
     
-    emailjs.sendForm('service_2dmyvob','template_pc60c4r',event.target,
-    'user_5Z8CH4k4gRBT4HYtQt3Aw').then(res=>{
+    emailjs.sendForm('service_m9pncll','template_dpa9g8u',event.target,
+    'WFJtW8YbnjDPJWWxF').then(res=>{
       if (res.ok) {
         alert('your message was sent...');
         history.replace('/contact')

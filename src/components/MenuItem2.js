@@ -10,7 +10,12 @@ function MenuItem2({ image, name, price }) {
       <h1> {name} </h1>
       <p> ₹{price} </p>
       <button 
-          onClick={() => history.push('/recipe/:Buy')}
+          onClick={() => history.push({
+            pathname: '/recipe/:Buy',
+            state: {
+              carname: name // <-- pass in content to key `id`
+            },})}
+          
           type="button" className="btn btn-info"  data-toggle="modal" data-target="#exampleModal">
          Rent
       </button>
