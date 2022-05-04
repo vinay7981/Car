@@ -6,6 +6,7 @@ import AuthContext from '../store/auth-context';
 import '../styles/Signin.css'
 
 
+
 const Login = () => {
   const [isLoading, setisLoading] = useState(false)
   const authctx = useContext(AuthContext);
@@ -66,14 +67,13 @@ const Login = () => {
 
   });
   
-
  
   return (
-    <div className='hello'>
+      <div className='hello'>
       <form onSubmit={formik.handleSubmit}>
       <h1 className="my-4 font-weight-bold .display-4">Login</h1>
-      
-      <label>Email</label><br />
+
+  <label>Email</label><br />
       <input 
       id='email'
       name='email'
@@ -102,7 +102,16 @@ const Login = () => {
        className="btn btn-primary mt-3" type="submit">Register</button>}<br />
       {isLoading && <h4 style={{color: 'blue'}} >connecting</h4>} 
       </form>
-    </div>
+  </div>
+  
+
+
+
+
+
+
+      
+   
   )
 }
 

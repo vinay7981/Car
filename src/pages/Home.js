@@ -8,9 +8,9 @@ function Home() {
     <div className="home" style={{ backgroundImage:`url(${BannerImage})`}}>
       <div className="headerContainer">
         <h1 style={{ fontWeight: "bold" }}> Car Rental </h1><br />
-        <p>CAR AT A CLICK</p>
+        <p>RENT A CAR AT A CLICK</p>
         <Link to="/cars">
-          <button> BOOK NOW </button>
+          <button> RENT NOW </button>
         </Link>
       </div>
     </div>
